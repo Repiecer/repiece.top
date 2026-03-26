@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+
 .DS_Store
 dist
 dist-ssr
@@ -39,6 +40,5 @@ __screenshots__/
 *.timestamp-*-*.mjs
 
 .venv
-
-.vscode
+.vscode/
 
