@@ -2,7 +2,7 @@
   <div class="shipping-app">
     <!-- 头部导航 -->
     <div class="nav-bar">
-      <h2>📦 拼单互助平台</h2>
+      <h2>nb📦 AI拼单互助平台</h2>
       <div class="nav-tabs">
         <button 
           :class="['tab-btn', { active: activeTab === 'browse' }]"

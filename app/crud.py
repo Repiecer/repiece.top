@@ -42,7 +42,7 @@ def create_request(db: Session, request: schemas.RequestCreate) -> models.Reques
         product_name=request.product_name,
         product_url=request.product_url,
         max_people=request.max_people,
-        current_people=1,  # 发布者自己算一个
+        current_people=0,  # 发布者自己算一个
         phone=request.phone,
         qq=request.qq,
         priority=request.priority,

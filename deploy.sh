@@ -8,8 +8,10 @@ NC='\033[0m' # No Color
 
 echo -e "${GREEN}=== 开始部署前端 ===${NC}"
 echo -e "${GREEN}=== frontend ===${NC}"
-scp -r -P 50704 ./dist/ root@110.42.96.105:/opt/1panel/www/sites/repiece.top/frontend/dist/
+scp -r -P 50704 ./dist/ root@110.42.96.105:/opt/1panel/www/sites/repiece.top/frontend/
 echo -e "${GREEN}=== backend ===${NC}"
 
-scp -r -P 50704 ./app/ root@110.42.96.105:/opt/1panel/www/sites/repiece.top/backend/app/
-
+# 上传到 backend 目录，让 app 文件夹成为其子目录
+scp -r -P 50704 ./app root@110.42.96.105:/opt/1panel/www/sites/repiece.top/backend/
+echo -e "${GREEN}=== restart ===${NC}"
+ssh -p 50704 root@110.42.96.105 "pm2 restart all"

@@ -12,7 +12,7 @@ class Request(Base):
     max_people = Column(Integer, default=1, comment="接取上限人数")
     current_people = Column(Integer, default=1, comment="当前已接取人数")
     phone = Column(String(20), nullable=False, comment="发布者手机号")
-    qq = Column(String(20), nullable=False, comment="发布者QQ")
+    qq = Column(String(20), comment="发布者QQ")
     priority = Column(Integer, default=0, comment="优先级: 0普通,1紧急,2特急")
     description = Column(Text, nullable=True, comment="详细说明")
     publisher_name = Column(String(50), nullable=True, comment="发布者称呼")
